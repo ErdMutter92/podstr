@@ -31,7 +31,7 @@ def parse(feedurl, count, output, override):
                 save(path, filename, file)
 
 def main():
-    url = ''
+    url = None
     count = 5
     output = "."
     override = False
@@ -47,7 +47,7 @@ def main():
 
     args = parser.parse_args()
 
-    if not args.url == '':
+    if not args.url == None:
         parse(args.url, args.count, args.output, args.override)
     else:
         parser.print_help()
