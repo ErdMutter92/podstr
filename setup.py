@@ -15,7 +15,7 @@ setup(name='podstr',
     ],
     entry_points={
         'console_scripts': [
-            'podstr=podstr.__main__:main'
+            'podstr=podstr.cli:main'
         ],
     },
 )
