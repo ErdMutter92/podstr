@@ -39,7 +39,7 @@ def main():
 
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("-i", "--url", help="the url for the podcast feed")
+    parser.add_argument("url", help="the url for the podcast feed")
     parser.add_argument("-n", "--count", type=int, help="number of files from the top of list to download (int; default: 5)", default=5)
     parser.add_argument("-o", "--output", help="output directory for downloaded files (string; default: '.')", default=".")
     parser.add_argument("-f", "--override", type=bool, help="force files to be over written (boolean; default: false)", default=False)
@@ -47,7 +47,4 @@ def main():
 
     args = parser.parse_args()
 
-    if not args.url == None:
-        parse(args.url, args.count, args.output, args.override)
-    else:
-        parser.print_help()
+    parse(args.url, args.count, args.output, args.override)
