@@ -12,6 +12,7 @@ setup(name='podstr',
     install_requires=[
         'podcastparser',
         'requests',
+        'PyYaml',
     ],
     entry_points={
         'console_scripts': [
